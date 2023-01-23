@@ -36,6 +36,7 @@ const ApplyCreditCard = () => {
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false)
+  const [formValues, setFormValues] = useState(initialValues);
 
   useEffect(() => {
     if(Object.keys(formErrors).length === 0 && isSubmit) {
@@ -63,7 +64,7 @@ const ApplyCreditCard = () => {
     
   };
 
-  const [formValues, setFormValues] = useState(initialValues);
+  
 
 
 
