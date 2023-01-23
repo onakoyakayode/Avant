@@ -39,7 +39,7 @@ const ApplyCreditCard = () => {
 
   useEffect(() => {
     if(Object.keys(formErrors).length === 0 && isSubmit) {
-      formValues
+      console.log(formValues)
     }
   }, [formErrors, isSubmit, formValues])
 
