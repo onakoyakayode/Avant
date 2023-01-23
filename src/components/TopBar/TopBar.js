@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { Button } from '../../Styled/Button.styled'
 import { TopBarFlex, TopBarStyled } from '../../Styled/TopBar.styled'
 
@@ -9,12 +10,12 @@ const TopBar = () => {
             <ul className='top-bar-ul show-desktop'>
                 <li className='top-bar-item navigation__item redeem-link'>
                     <p className='navigation__link text_link black-text' tabIndex="0">
-                        <a className='menu-link'>REDEEM YOUR MAIL OFFER</a>
+                        <NavLink to='/' className='menu-link'>REDEEM YOUR MAIL OFFER</NavLink>
                     </p>
                     <div className='sub-navigation'>
                         <ul className='sub-navigation__list top-bar-sub-nav-list'>
                             <li className='sub-navigation__item'>
-                                <a className='sub-navigation__link' data-event="credit card" href='#'> Credit Card</a>
+                                <NavLink className='sub-navigation__link' data-event="credit card" to='/credit-card'> Credit Card</NavLink>
                             </li>
                             <li className='sub-navigation__item'>
                                 <a className='sub-navigation__link' href='https://www.myavantoffer.com' data-event="loan">Loan</a>
@@ -23,7 +24,7 @@ const TopBar = () => {
                     </div>
                 </li>
                 <li className='top-bar-item navigation__item blue-button'>
-                    <a className='navigation__link text_link white-text' href='#' data-event="login">
+                    <NavLink className='navigation__link text_link white-text' to='/' data-event="login">
                         <Button color="#fff" 
                             bgColor="#2a2a3f" 
                             background="#0d5bff" 
@@ -32,7 +33,7 @@ const TopBar = () => {
                             fontSize="13px">
                                 LOGIN
                         </Button>
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </TopBarFlex>

@@ -12,7 +12,7 @@ const ApplyCreditCard = () => {
   
   const validate = (values) => {
     const errors = {};
-    const regex = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    // const regex = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
 
     if (!values.firstName) {
@@ -41,7 +41,7 @@ const ApplyCreditCard = () => {
     if(Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues)
     }
-  }, [formErrors])
+  }, [])
 
   
 
@@ -347,9 +347,9 @@ const ApplyCreditCard = () => {
                 </div>
                 <small class="form__blurb">
                 We use 128-bit SSL protection and strict, high levels of security &amp; encryption standards to keep your information safe.
-                <a href="javascript:void(0);" popover="We use your social security number to help verify your information to issue credit. We also encrypt this information to keep you safe">
+                <button onClick="" popover="We use your social security number to help verify your information to issue credit. We also encrypt this information to keep you safe">
                 More Information
-                </a>
+                </button>
                 </small>
                 <br></br>
 
@@ -513,7 +513,7 @@ const ApplyCreditCard = () => {
                 <ul class="app-form__consent-list list-bullet">
                 <li ng-hide="">
                 <small>
-                Avant's <a href="javascript:void(0);" ng-click="loadStaticModal('/customer_application_renderer/v2/modals/terms_of_use.html')">Terms of Use</a>
+                Avant's <button onClick="" ng-click="loadStaticModal('/customer_application_renderer/v2/modals/terms_of_use.html')">Terms of Use</button>
 
 
                 </small>
@@ -522,7 +522,7 @@ const ApplyCreditCard = () => {
                 </li>
                 <li ng-hide="">
                 <small>
-                <a href="https://www.avant.com/avant-privacy-notice" target="_blank">Avant's Privacy Notice</a> and <a href="https://www.avant.com/webbank-privacy-notice" target="_blank">WebBank's Privacy Notice</a>
+                <a href="https://www.avant.com/avant-privacy-notice" target="_blank" rel='noreferrer'>Avant's Privacy Notice</a> and <a href="https://www.avant.com/webbank-privacy-notice" target="_blank" rel="noreferrer">WebBank's Privacy Notice</a>
 
 
                 </small>
@@ -531,14 +531,14 @@ const ApplyCreditCard = () => {
                 </li>
                 <li ng-hide="">
                 <small>
-                <a href="javascript:void(0);" ng-click="loadStaticModal('/customer_application_renderer/v2/modals/electronic_communications_consent.html')">Electronic Communications Agreement</a>
+                <button onClick="" ng-click="loadStaticModal('/customer_application_renderer/v2/modals/electronic_communications_consent.html')">Electronic Communications Agreement</button>
 
 
                 </small>
                 </li>
                 <li ng-hide="">
                 <small>
-                <a href="javascript:void(0);" ng-click="loadStaticModal('/customer_application_renderer/v2/modals/call_and_text.html')">Authorization to Receive Calls and SMS Messages</a>
+                <button onClick="" ng-click="loadStaticModal('/customer_application_renderer/v2/modals/call_and_text.html')">Authorization to Receive Calls and SMS Messages</button>
 
                 </small>
                 <input ng-init="customer_consent.receive_calls_about_account = true" ng-model="customer_consent.receive_calls_about_account" type="hidden" autocomplete="off" class="ng-pristine ng-untouched ng-valid ng-not-empty" />

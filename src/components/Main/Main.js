@@ -3,6 +3,7 @@ import { Button } from '../../Styled/Button.styled'
 import { Flex } from '../../Styled/Flex.styled'
 import '../../Styles/Main.css'
 import { UilAngleRight } from '@iconscout/react-unicons';
+import { NavLink } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -31,7 +32,7 @@ const Main = () => {
                             <p className='subtext'>
                                 Everyone’s financial life is different. That’s why we offer flexible choices, simple solutions and friendly support to help you keep moving forward, one step at a time. So whether you need a credit card, a loan to help cover the unexpected or a clear answer to a difficult question, we're here to help.
                             </p>
-                            <a href='#'>
+                            <NavLink to='/'>
                                 <Button
                                     padding="12px 32px" 
                                     color='#0d5bff' 
@@ -46,7 +47,7 @@ const Main = () => {
                                     <UilAngleRight />
                                     GET TO KNOW AVANT
                                 </Button>
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
@@ -95,7 +96,7 @@ const Main = () => {
                                     <p class="subtext ellipsis">Get closer to your financial goals with clear and transparent credit limits from $300-$2,000.</p>
                                 </div>
                             </div>
-                            <a href='#' className='two-col-btn'>
+                            <NavLink to='credit-card/apply' className='two-col-btn'>
                                 <Button
                                     padding="12px 32px" 
                                     color='#0d5bff' 
@@ -110,7 +111,7 @@ const Main = () => {
                                     <UilAngleRight />
                                     APPLY NOW
                                 </Button>
-                            </a>
+                            </NavLink>
                         </div>
                         
                         
@@ -131,7 +132,7 @@ const Main = () => {
                                     <p class="subtext ellipsis">Borrow $2,000 - $35,000* for things like a medical bill, a home project, or an unexpected expense.</p>
                                 </div>
                             </div>
-                            <a href='#' className='two-col-btn'>
+                            <NavLink href='/' className='two-col-btn'>
                                 <Button
                                     padding="12px 32px" 
                                     color='#0d5bff' 
@@ -146,7 +147,7 @@ const Main = () => {
                                     <UilAngleRight />
                                     CHECK OPTIONS
                                 </Button>
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
                 </section>
@@ -164,7 +165,7 @@ const Main = () => {
                         </div>
                         <div className='buttons'>
                             <Flex gap="1em">
-                                <a href='#'>
+                                <NavLink href='/credit-card'>
                                     <Button 
                                         padding="18px 32px" 
                                         color='#0d5bff' 
@@ -179,8 +180,8 @@ const Main = () => {
                                         <UilAngleRight />
                                             CREDIT CARDS
                                     </Button>
-                                </a>
-                                <a href='#'>
+                                </NavLink>
+                                <NavLink href='/loans'>
                                     <Button 
                                         padding="18px 32px" 
                                         color='#0d5bff' 
@@ -191,9 +192,9 @@ const Main = () => {
                                         fontSize="18px"
                                         border="0px">
                                         <UilAngleRight />
-                                            LOAN
+                                            LOANS
                                     </Button>
-                                </a>
+                                </NavLink>
                             </Flex>
                         </div>
                     </div>
@@ -228,7 +229,7 @@ const Main = () => {
                                     <p class="subtext ellipsis">We use end-to-end industry-standard encryption and state-of-the-art technology to make sure your data stays safe and secure.</p>
                                 </div>
                                 <div class="buttons-undefined">
-                                    <a width="100%" href='#'>
+                                    <NavLink width="100%" to='/'>
                                         <Button
                                             padding="12px 32px" 
                                             color='#0d5bff' 
@@ -244,7 +245,7 @@ const Main = () => {
                                             <UilAngleRight />
                                             LEARN MORE
                                         </Button>
-                                    </a>   
+                                    </NavLink>   
                             
                                 </div>
                             </div>
@@ -266,7 +267,7 @@ const Main = () => {
                                     <br/>
                                 </div>
                                 <div class="buttons-undefined">
-                                    <a width="100%" href='#'>
+                                    <NavLink width="100%" to='/'>
                                         <Button
                                             padding="12px 32px" 
                                             color='#0d5bff' 
@@ -282,7 +283,7 @@ const Main = () => {
                                             <UilAngleRight />
                                             GET IN TOUCH
                                         </Button>
-                                    </a>   
+                                    </NavLink>   
                             
                                 </div>
                             </div>
@@ -304,7 +305,7 @@ const Main = () => {
                                     <br />
                                 </div>
                                 <div class="buttons-undefined">
-                                    <a width="100%" href='#'>
+                                    <NavLink width="100%" to='/'>
                                         <Button
                                             padding="12px 32px" 
                                             color='#0d5bff' 
@@ -320,7 +321,7 @@ const Main = () => {
                                             <UilAngleRight />
                                             SEE FAQS
                                         </Button>
-                                    </a>   
+                                    </NavLink>   
                             
                                 </div>
                             </div>
@@ -336,7 +337,7 @@ const Main = () => {
                     <h2 class=" text-center align-center">Go Ahead and Explore Your Financial Choices. It Won’t Impact Your Credit Score.</h2>
                     </div>
                     <Flex gap="1em" className='check-button'>
-                    <a href='#'>
+                    <NavLink to='/credit-card/apply'>
                         <Button 
                             padding="15px 32px" 
                             color='#0d5bff' 
@@ -350,8 +351,8 @@ const Main = () => {
                             <UilAngleRight />
                                 APPLY FOR A CREDIT CARD
                         </Button>
-                    </a>
-                    <a href='#'>
+                    </NavLink>
+                    <NavLink to='/loans'>
                         <Button 
                             padding="15px 32px" 
                             color='#0d5bff' 
@@ -364,7 +365,7 @@ const Main = () => {
                             <UilAngleRight />
                                 CHECK YOUR LOAN OPTIONS
                         </Button>
-                    </a>
+                    </NavLink>
                 </Flex>
                 </div>
             </div>

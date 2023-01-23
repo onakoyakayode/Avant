@@ -24,9 +24,9 @@ const Header = () => {
             </li>
         </ul>
         <div id="my-account-dropdown" class="header__drawer-link">
-            <a href="javascript:void(0)" data-header-nav="true" aria-controls="drawer" aria-haspopup="menu" onClick={handleOpen} aria-expanded="true" id="header-drawer-link">My Account<i aria-hidden="true" focusable="false" class="header__icon-arrow header__icon-arrow--up"></i></a>
+            <a href="" data-header-nav="true" aria-controls="drawer" onClick={handleOpen} aria-expanded="true" id="header-drawer-link">My Account<i aria-hidden="true" focusable="false" class="header__icon-arrow header__icon-arrow--up"></i></a>
         </div>
-        {open ? (<div id="drawer" aria-expanded="false" aria-labelledby="header-drawer-link" data-header-drawer="" role="menu" class="header__drawer">
+        {open ? (<div id="drawer" aria-labelledby="header-drawer-link" data-header-drawer="" role="menu" class="header__drawer">
             <ul data-header-drawer="true">
                 <li>
                     <a href="http://support.avant.com">Questions?</a>

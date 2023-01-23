@@ -14,7 +14,7 @@ const Footer = () => {
             </a>
           </li>
           <li className='footer__item'>
-            <a className='footer__link' href='JavaScript:Void(0);'>
+            <a className='footer__link'>
               PRODUCTS
             </a>
             <div className='drop-down'>
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
           </li>
           <li className='footer__item'>
-            <a className='footer__link' href='JavaScript:Void(0);'>
+            <a className='footer__link'>
               SUPPORT
             </a>
             <div className='drop-down'>
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
           </li>
           <li className='footer__item'>
-            <a className='footer__link' href='JavaScript:Void(0);'>
+            <a className='footer__link'>
               LEGAL
             </a>
             <div className='drop-down'>
@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
           </li>
           <li className='footer__item'>
-            <a className='footer__link' href='JavaScript:Void(0);'>
+            <a className='footer__link'>
               CONNECT
             </a>
             <div className='drop-down'>

@@ -5,7 +5,7 @@ import "../../Styles/Credit-card.css";
 import { UilAngleRight } from '@iconscout/react-unicons';
 import { Button } from '../../Styled/Button.styled';
 import Footer from '../Footer/Footer';
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const CreditCard = () => {
 
@@ -30,7 +30,7 @@ const CreditCard = () => {
                 </p>
             </div>
             <div className='buttons'>
-                <a href='/credit-card/apply'>
+                <NavLink to='/credit-card/apply'>
                     <Button 
                         padding="15px 35px" 
                         color='#fff' 
@@ -45,8 +45,8 @@ const CreditCard = () => {
                         <UilAngleRight />
                             SEE IF YOU QUALIFY
                     </Button>
-                </a>
-                <a href='#'>
+                </NavLink>
+                <NavLink to='/'>
                     <Button 
                         padding="15px 35px" 
                         color='#0d5bff' 
@@ -59,7 +59,7 @@ const CreditCard = () => {
                         <UilAngleRight />
                             REDEEM YOUR MAIL OFFER
                     </Button>
-                </a>
+                </NavLink>
             </div>
         </div>
         <div className='headline-right'></div>
