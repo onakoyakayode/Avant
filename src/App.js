@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import ApplyCreditCard from './components/Credit-card/ApplyCreditCard';
+import ApplyCreditCardSuccess from './components/Credit-card/ApplyCreditCardSuccess';
+import CreditCard from './components/Credit-card/CreditCard';
+import Header from './components/Header/Header';
+import Loans from './components/LOANS/Loans';
 
 function App() {
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Header />} />
+          <Route path='/credit-card' element={<CreditCard />} />
+          <Route path='/credit-card/apply' element={<ApplyCreditCard />}/>
+          <Route path='/credit-card/success' element={<ApplyCreditCardSuccess authorized={true}/>} />
+          <Route path='/loans' element={<Loans />} />
+          
+        </Routes>
+        
+      </Router>
     </div>
   );
 }

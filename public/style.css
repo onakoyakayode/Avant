@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'cera-pro';
+    src: url('fonts/cera-pro/Cera\ Pro\ Black.otf');
+    src: url('fonts/cera-pro/Cera\ Pro\ Bold.otf') format('embedded-opentype'),
+         url('fonts/cera-pro/Cera\ Pro\ Light.otf') format('otf'),
+         url('fonts/cera-pro/Cera\ Pro\ Medium.otf') format('otf'),
+         url('fonts/cera-pro/Cera\ Pro\ Regular.otf') format('otf'),
+         url('fonts/cera-pro/Cera\ Pro\ Thin.otf') format('otf');
+  
+    font-weight: normal;
+    font-style: normal;
+}

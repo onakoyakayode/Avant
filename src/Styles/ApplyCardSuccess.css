@@ -1,0 +1,28 @@
+.apply-card-success {
+    padding: 5em 7em;
+    font-family: CeraProBold;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-success-msg h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.card-success-msg h1 span {
+    font-size: 6rem;
+    line-height: 7rem;
+    text-transform: uppercase;
+}
+
+.card-success-text {
+    margin-bottom: 4rem;
+}
+
+.card-success-left p {
+    font-family: CeraProRegular;
+}

@@ -1,38 +1,376 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: CeraProBold;
+  src: url(/public/fonts/cera-pro/CeraProBold.otf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: CeraProRegular;
+  src: url(/public/fonts/cera-pro/CeraProRegular.otf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: CeraProLight;
+  src: url(/public/fonts/cera-pro/CeraProLight.otf);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: ceraProMedium;
+  src: url(/public/fonts/cera-pro/CeraProMedium.otf);
+}
+
+@font-face {
+  font-family: ceraProThin;
+  src: url(/public/fonts/cera-pro/CeraProThin.otf);
+}
+
+@font-face {
+  font-family: ceraProBlack;
+  src: url(/public/fonts/cera-pro/CeraProBlack.otf);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spectral', serif;
+  font-family: CeraProBold;
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+}
+
+
+a {
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav {
+  min-height: 61px;
+  background-color: transparent;
+  max-width: 100%;
+  /* margin: 0 3rem 0rem 4rem; */
+  padding: 0 3rem 0rem 4rem;
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: 'flex-start';
+  z-index: 2;
+  box-shadow: 0 0px 10px 0 rgba(99 99 99 / 20%);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 600px) {
+  .nav {
+    min-height: 20px;
+    z-index: 20;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:  auto 0;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 2px #2a2a3f;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.nav .img-logo {
+  max-width: 134px;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .nav .img-logo {
+    max-width: 130px;
+  }
+}
+
+.nav .img-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+li {
+  list-style: none;
+}
+
+@media screen and (max-width: 600px)  {
+  li {
+    margin-bottom: 12%;
+    color: #fff;
+  }
+}
+
+.top-nav-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .top-nav-link {
+    display: block;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: all 0.5 ease-in-out;
+  }
+
+  .nav__items {
+    background-color: #0d5bff;
+    width: 100%;
+    justify-content: flex-start;
+    color: #fff;
+  }
+}
+
+#nav-link {
+  padding: 3rem 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  #nav-links {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+
+.sub-nav {
+  display: flex;
+  min-width: 170px;
+  width: 100%;
+  height: max-content;
+  overflow: visible;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+
+
+.sub_nav_lists {
+  display: none;
+  background-color: #fff;
+  max-width: 30vw;
+  width: 100%;
+  height: max-content;
+  z-index: 10;
+}
+
+.sub_nav_lists li {
+  margin-block: 1rem;
+  padding-inline: 5px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .sub_nav_lists li {
+    margin-block: 1.5rem;
+  }
+}
+
+.top-nav-link:hover .sub_nav_lists {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  height: max-content;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 14%);
+  position: absolute;
+  top: 0rem;
+  padding: 1rem 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .top-nav-link:hover .sub_nav_lists {
+    background-color: #0d5bff;
+  }
+}
+
+.sub_nav_link {
+  color: #2a2a3f;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+  .sub_nav_link {
+    color: #fff;
+  }
+}
+
+.sub_nav_link:hover {
+  color: #0d5bff;
+}
+
+@media screen and (max-width: 600px) {
+  .sub_nav_link:hover {
+    color: #fff;
+  }
+}
+
+
+.menu-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  color: #0d5bff;
+  display: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+  .menu-button {
+    display: block;
+
+  }
+}
+
+
+.headline {
+  min-height: calc(90vh - 93px);
+  background-color: #0d5bff;
+  padding: 3em 3em 0;
+  font-family: CeraProBold;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .headline {
+    padding: 20px;
+  }
+}
+
+.headline-intro {
+  padding: 0 1.5rem;
+  width: 65%;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .headline-intro {
+    padding: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.desktop-break {
+  display: block;
+}
+
+.headline-2 {
+  color: #0d5bff;
+  display: block;
+  font-size: 7rem;
+  line-height: 6rem;
+  text-shadow: 2px 2px #fff, 2px 0 #fff, 2px -2px #fff, 0 2px #fff, 0 -2px #fff, -2px 2px #fff, -2px 0 #fff, -2px -2px #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .headline-2 {
+    font-size: 3.5rem;
+    line-height: 3.3rem;
+  }
+}
+
+.subheadline {
+  margin: 1em 0;
+  display: flex;
+  width: 85%;
+  font-size: 2.2em;
+}
+
+@media screen and (max-width: 600px) {
+  .subheadline {
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1.2em 0;
+  }
+}
+
+.subheadline span {
+  flex: 1 1;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  padding: 0;
+  font-family: CeraProLight;
+}
+
+@media screen and (max-width: 600px) {
+  .subheadline span {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
+
+
+.headline-img {
+  width: 45%;
+  height: max-content;
+  z-index: 3;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .headline-img {
+    width: 100%;
+    height: fit-content;
+    overflow: inherit;
+  }
+}
+
+.headline-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.2;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .headline-img img {
+    scale: 1.1;
+    margin-bottom: -.5%;
+  }
+}
+
+.blck-bck {
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .blck-bck {
+    width: 300px;
+    bottom: 0px;
+    left: -25%;
+  }
+}
+
+
+.blck-bck img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: right center;
+}
+
+@media screen and (max-width: 600px) {
+  .blck-bck img {
+    object-position: left bottom;
   }
 }
