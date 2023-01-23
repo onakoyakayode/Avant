@@ -41,7 +41,7 @@ const ApplyCreditCard = () => {
     if(Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues)
     }
-  }, [])
+  }, [formErrors, formValues])
 
   
 
@@ -90,7 +90,8 @@ const ApplyCreditCard = () => {
       birthDay: formValues.birthDay,
       birthMonth: formValues.birthMonth,
       birthYear: formValues.birthYear,
-      checked: formValues.checked
+      checked: formValues.checked,
+      setIsSubmit: formValues.isSubmit
       
     }).then(res => {
       console.log(res.data)

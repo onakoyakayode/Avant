@@ -1,6 +1,7 @@
 import React from 'react'
 import FooterLegal from './FooterLegal'
 import '../../Styles/Footer.css'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -14,9 +15,9 @@ const Footer = () => {
             </a>
           </li>
           <li className='footer__item'>
-            <a className='footer__link'>
+            <NavLink className='footer__link'>
               PRODUCTS
-            </a>
+            </NavLink>
             <div className='drop-down'>
               <ul className='drop-down__list'>
                 <li className='drop-down__item'>
@@ -38,9 +39,9 @@ const Footer = () => {
             </div>
           </li>
           <li className='footer__item'>
-            <a className='footer__link'>
+            <NavLink className='footer__link'>
               SUPPORT
-            </a>
+            </NavLink>
             <div className='drop-down'>
               <ul className='drop-down__list'>
                 <li className='drop-down__item'>
@@ -53,9 +54,9 @@ const Footer = () => {
             </div>
           </li>
           <li className='footer__item'>
-            <a className='footer__link'>
+            <NavLink className='footer__link'>
               LEGAL
-            </a>
+            </NavLink>
             <div className='drop-down'>
               <ul className='drop-down__list'>
                 <li className='drop-down__item'>
@@ -86,9 +87,9 @@ const Footer = () => {
             </div>
           </li>
           <li className='footer__item'>
-            <a className='footer__link'>
+            <NavLink className='footer__link'>
               CONNECT
-            </a>
+            </NavLink>
             <div className='drop-down'>
               <ul className='drop-down__list'>
                 <li className='drop-down__item'>

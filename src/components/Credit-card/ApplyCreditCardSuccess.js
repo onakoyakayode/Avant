@@ -24,10 +24,9 @@ const ApplyCreditCardSuccess = ({authorized, items}) => {
         }
 
         fetchData();
-        console.log(datas)
    
     if (!authorized) {
-        return navigate('/')
+        return navigate('/');
     }
    }, [datas])
 

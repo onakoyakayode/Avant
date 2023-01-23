@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import '../../Styles/HeaderCreditCard.css'
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
             </li>
         </ul>
         <div id="my-account-dropdown" class="header__drawer-link">
-            <a href="" data-header-nav="true" aria-controls="drawer" onClick={handleOpen} aria-expanded="true" id="header-drawer-link">My Account<i aria-hidden="true" focusable="false" class="header__icon-arrow header__icon-arrow--up"></i></a>
+            <NavLink data-header-nav="true" aria-controls="drawer" onClick={handleOpen} aria-expanded="true" id="header-drawer-link">My Account<i aria-hidden="true" focusable="false" class="header__icon-arrow header__icon-arrow--up"></i></NavLink>
         </div>
         {open ? (<div id="drawer" aria-labelledby="header-drawer-link" data-header-drawer="" role="menu" class="header__drawer">
             <ul data-header-drawer="true">
