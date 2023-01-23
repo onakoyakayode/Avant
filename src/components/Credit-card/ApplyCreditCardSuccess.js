@@ -28,7 +28,7 @@ const ApplyCreditCardSuccess = ({authorized, items}) => {
     if (!authorized) {
         return navigate('/');
     }
-   }, [datas])
+   }, [datas, navigate, authorized])
 
    
 
